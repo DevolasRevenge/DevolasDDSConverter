@@ -251,7 +251,7 @@ class LIST_OT_ConvertItem(Operator):
         exe_dir = f'"{exe_dir}"'
         print(":: exe dir: ", exe_dir)
         
-        command = exe_dir + " -f " + item.typedds + " " + " -y " + input_value + output_value
+        command = exe_dir + " -f " + item.typedds + " -srgb" + " -y " + input_value + output_value
         print(":: arguments being sent:", command)     
    
         
@@ -311,7 +311,7 @@ class LIST_OT_ConvertAll(Operator):
             exe_dir = f'"{exe_dir}"'
             print(":: exe dir:", exe_dir)
             
-            command = exe_dir + " -f " + item.typedds + " " + " -y " + input_value + output_value
+            command = exe_dir + " -f " + item.typedds + " -srgb" + " -y " + input_value + output_value
             print(":: arguments being sent: ", command)     
        
             
