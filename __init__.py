@@ -247,7 +247,7 @@ class LIST_OT_ConvertItem(Operator):
         print(pathlib.Path().resolve())
         #exe_dir= abs_tex_conv_path
         #exe_dir = str(pathlib.Path(__file__).parent.resolve()) + "texconv.exe"
-        exe_dir = bpy.utils.script_path_user() + "\\addons\\texconv.exe"
+        exe_dir = bpy.utils.script_path_user() + "\\addons\\DevolasDDSConverter-main\\texconv.exe"
         exe_dir = f'"{exe_dir}"'
         print(":: exe dir: ", exe_dir)
         
@@ -307,7 +307,7 @@ class LIST_OT_ConvertAll(Operator):
             print(pathlib.Path().resolve())
             #exe_dir= abs_tex_conv_path
             #exe_dir = str(pathlib.Path(__file__).parent.resolve()) + "texconv.exe"
-            exe_dir = bpy.utils.script_path_user() + "\\addons\\texconv.exe"
+            exe_dir = bpy.utils.script_path_user() + "\\addons\\DevolasDDSConverter-main\\texconv.exe"
             exe_dir = f'"{exe_dir}"'
             print(":: exe dir:", exe_dir)
             
