@@ -241,12 +241,10 @@ class LIST_OT_ConvertItem(Operator):
             output_value = " -o " + f'"{cvalue.outputpath}'
         else:
             output_value = ""
-            print(":: output folder not provided, defaulting to current directory")                   
+            raise NotADirectoryError("Please select an Output Folder")                   
 
         
         print(pathlib.Path().resolve())
-        #exe_dir= abs_tex_conv_path
-        #exe_dir = str(pathlib.Path(__file__).parent.resolve()) + "texconv.exe"
         exe_dir = bpy.utils.script_path_user() + "\\addons\\DevolasDDSConverter-main\\texconv.exe"
         exe_dir = f'"{exe_dir}"'
         print(":: exe dir: ", exe_dir)
@@ -301,12 +299,10 @@ class LIST_OT_ConvertAll(Operator):
                 output_value = " -o " + f'"{cvalue.outputpath}'
             else:
                 output_value = ""
-                print(":: output folder not provided, defaulting to current directory")                   
+                raise NotADirectoryError("Please select an Output Folder")                 
 
             
             print(pathlib.Path().resolve())
-            #exe_dir= abs_tex_conv_path
-            #exe_dir = str(pathlib.Path(__file__).parent.resolve()) + "texconv.exe"
             exe_dir = bpy.utils.script_path_user() + "\\addons\\DevolasDDSConverter-main\\texconv.exe"
             exe_dir = f'"{exe_dir}"'
             print(":: exe dir:", exe_dir)
@@ -361,7 +357,7 @@ class OpenBatchImport(Operator, ImportHelper):
     """Import multiple image files."""
 
     bl_idname = "file.batch_import"
-    bl_label = "Batch Import Images"   
+    bl_label = "Import Images"   
     
     #filters file types
     filter_glob: StringProperty(
